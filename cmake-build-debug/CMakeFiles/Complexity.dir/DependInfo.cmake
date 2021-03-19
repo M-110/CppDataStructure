@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/--Programming/C++/Complexity/main.cpp" "D:/--Programming/C++/Complexity/cmake-build-debug/CMakeFiles/Complexity.dir/main.cpp.obj"
+  "E:/Git/CppDataStructures/main.cpp" "E:/Git/CppDataStructures/cmake-build-debug/CMakeFiles/Complexity.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 
