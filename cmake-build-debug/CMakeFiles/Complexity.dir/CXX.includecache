@@ -69,6 +69,8 @@ linked_lists.cpp
 E:/Git/CppDataStructures/linked_lists.cpp
 recursion_tests.cpp
 E:/Git/CppDataStructures/recursion_tests.cpp
+search_hash.cpp
+E:/Git/CppDataStructures/search_hash.cpp
 
 E:/Git/CppDataStructures/palindrome.cpp
 ostream
@@ -83,6 +85,14 @@ queue
 -
 
 E:/Git/CppDataStructures/recursion_tests.cpp
+iostream
+-
+vector
+-
+string
+-
+
+E:/Git/CppDataStructures/search_hash.cpp
 iostream
 -
 vector

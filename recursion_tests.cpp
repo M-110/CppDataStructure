@@ -44,7 +44,7 @@ string MoveTower(int height, char fromTower, char toTower, char withTower)
 
 void TowersOfHanoi(int numberOfRings)
 {
-    string directions = MoveTower(numberOfRings, 'A', 'B', 'C');
+    string directions = MoveTower(numberOfRings, 'A', 'C', 'B');
     directions.pop_back();
     directions.pop_back();
     cout << "Directions for solving Towers of Hanoi with " << numberOfRings << " rings:" << endl;
@@ -61,5 +61,5 @@ void TestRecursion()
     cout << "Converting 143 to binary: " << ConvertToBase(143, 2) << endl;
     cout << "Converting 143 to hexadecimal: " << ConvertToBase(143, 16) << endl;
     
-    TowersOfHanoi(4);
+    TowersOfHanoi(3);
 }

@@ -9,6 +9,7 @@
 #include "palindrome.cpp"
 #include "linked_lists.cpp"
 #include "recursion_tests.cpp"
+#include "search_hash.cpp"
 
 
 using namespace std;
@@ -25,6 +26,7 @@ int main()
 //    run_queue_tests();
 //    TestPalindromes();
 //    ConstructList();
-    TestRecursion();
+//    TestRecursion();
+    SearchAndHashing();
 
 }
