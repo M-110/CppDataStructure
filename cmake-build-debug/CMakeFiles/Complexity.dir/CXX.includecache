@@ -99,6 +99,8 @@ vector
 -
 string
 -
+cmath
+-
 
 E:/Git/CppDataStructures/stack.cpp
 iostream
