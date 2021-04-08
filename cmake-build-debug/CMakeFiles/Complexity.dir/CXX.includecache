@@ -71,6 +71,8 @@ recursion_tests.cpp
 E:/Git/CppDataStructures/recursion_tests.cpp
 search_hash.cpp
 E:/Git/CppDataStructures/search_hash.cpp
+sorting_algorithms.cpp
+E:/Git/CppDataStructures/sorting_algorithms.cpp
 
 E:/Git/CppDataStructures/palindrome.cpp
 ostream
@@ -100,6 +102,12 @@ vector
 string
 -
 cmath
+-
+
+E:/Git/CppDataStructures/sorting_algorithms.cpp
+iostream
+-
+vector
 -
 
 E:/Git/CppDataStructures/stack.cpp

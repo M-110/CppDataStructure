@@ -10,6 +10,7 @@
 #include "linked_lists.cpp"
 #include "recursion_tests.cpp"
 #include "search_hash.cpp"
+#include "sorting_algorithms.cpp"
 
 
 using namespace std;
@@ -27,6 +28,7 @@ int main()
 //    TestPalindromes();
 //    ConstructList();
 //    TestRecursion();
-    SearchAndHashing();
+//    SearchAndHashing();
+    SortFunctions();
 
 }

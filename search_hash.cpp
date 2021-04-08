@@ -55,20 +55,79 @@ public:
         return (hash + 1) % size;
     }
     
-    void put(int key, string value)
+    void Put(int key, string value)
     {
         int hash = HashFunction(key);
         int count = 0;
-        
         if (values[hash].empty())
         {
             keys[hash] = key;
             values[hash] = value;
         }
-        
+        else
+        {
+            if (keys[hash] == key)
+                values[hash] = value;
+            else
+            {
+                int nextSlot = Rehash(hash);
+                while (!values[nextSlot].empty() && keys[nextSlot] != key)
+                {
+                    nextSlot = Rehash(nextSlot);
+                    count++;
+                    if (count > size)
+                    {
+                        cout << "Dictionary is full. (" << count << " keys)" << endl;
+                    }
+                }
+                if (!values[nextSlot].empty())
+                {
+                    keys[nextSlot] = key;
+                    values[nextSlot] = value;
+                }
+                else
+                    values[nextSlot] = value;
+            }
+        }
     }
     
+    string Get(int key)
+    {
+        int startSlot = HashFunction(key);
+        
+        string val;
+        bool stop = false;
+        bool found = false;
+        int position = startSlot;
+        
+        while(!values[position].empty() && !found && !stop)
+        {
+            if (keys[position] == key)
+            {
+                found = true;
+                val = values[position];
+            }
+            else
+            {
+                position = Rehash(position);
+                if (position == startSlot)
+                    stop = true;
+            }
+        }
+        return val;
+    }
+    friend ostream& operator<<(ostream& stream, Dictionary& hash);
 };
+
+
+
+ostream& operator<<(ostream& stream, Dictionary& hash) {
+    for (int i=0; i<hash.size; i++) {
+        stream<<hash.keys[i]<<": "<<hash.values[i]<<endl;
+    }
+
+    return stream;
+}
 
 void BinarySearchTests()
 {
@@ -82,13 +141,23 @@ void BinarySearchTests()
 
 void HashTests()
 {
-    cout << HashFunction("Dog", 10) << endl;
-    cout << HashFunction("Cat", 10) << endl;
-    cout << HashFunction("Wrench", 10) << endl;
+    
+    Dictionary dict;
+
+    dict.Put(54, "cat");
+    dict.Put(26, "dog");
+    dict.Put(93, "lion");
+    dict.Put(17, "tiger");
+    dict.Put(77, "bird");
+    dict.Put(31, "cow");
+    dict.Put(44, "goat");
+    dict.Put(55, "pig");
+    dict.Put(20, "chicken");
+    cout << dict << endl;
 }
 
 void SearchAndHashing()
 {
-    // BinarySearchTests();
+    BinarySearchTests();
     HashTests();
 }

@@ -11,6 +11,7 @@ CMakeFiles\Complexity.dir\main.cpp.obj: ..\palindrome.cpp
 CMakeFiles\Complexity.dir\main.cpp.obj: ..\queue_tests.cpp
 CMakeFiles\Complexity.dir\main.cpp.obj: ..\recursion_tests.cpp
 CMakeFiles\Complexity.dir\main.cpp.obj: ..\search_hash.cpp
+CMakeFiles\Complexity.dir\main.cpp.obj: ..\sorting_algorithms.cpp
 CMakeFiles\Complexity.dir\main.cpp.obj: ..\stack.cpp
 CMakeFiles\Complexity.dir\main.cpp.obj: ..\vector_tests.cpp
 
